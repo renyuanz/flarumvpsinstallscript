@@ -49,11 +49,6 @@ if [ ! -e /usr/bin/composer ]
     php -r "unlink('composer-setup.php');"
 fi
 
-# Install flarum
-echo Installing flarum..
-composer create-project flarum/flarum "$flarum_install" --stability=beta
-
-
 # Change group and permissions
 chmod 775 "$flarum_install"
 chmod -R 775 "$flarum_install/assets" "$flarum_install/storage"
